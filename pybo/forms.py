@@ -15,7 +15,7 @@ class QuestionForm(forms.ModelForm):
         }
 
 class AnswerForm(forms.ModelForm):
-    class meta:
+    class Meta:
         model = Answer
         fields = ['content']
         labels = {
