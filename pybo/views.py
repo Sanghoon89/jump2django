@@ -21,7 +21,7 @@ def index(request):
     paginator = Paginator(question_list, 10) # 페이지당 10개씩 보여 주기
     page_obj = paginator.get_page(page)
 
-    context = {'question_list': question_list}
+    context = {'question_list': page_obj}
     return render(request, 'pybo/question_list.html', context)
 
 def detail(request, question_id):
