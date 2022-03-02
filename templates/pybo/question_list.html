@@ -55,7 +55,7 @@
                         {{ page_number }}
                     </a>
                 </li>
-            {% enfif %}
+            {% endif %}
         {% endfor %}
         <!-- 다음 페이지 -->
         {% if question_list.has_next %}
@@ -71,7 +71,7 @@
                     다음
                 </a>
             </li>
-        {% enfif %}
+        {% endif %}
     </ul>
     <!-- 페이징 처리 끝 -->
     <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">
