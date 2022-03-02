@@ -6,6 +6,7 @@ from .models import Question, Answer
 from django.utils import timezone
 from .forms import QuestionForm, AnswerForm
 from django.core.paginator import Paginator
+
 def index(request):
     """
     pybo 목록 출력
@@ -19,7 +20,7 @@ def index(request):
     # 페이징 처리
     paginator = Paginator(question_list, 10) # 페이지당 10개씩 보여 주기
     page_obj = paginator.get_page(page)
-    
+
     context = {'question_list': question_list}
     return render(request, 'pybo/question_list.html', context)
 
