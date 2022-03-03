@@ -16,7 +16,7 @@
         {% for question in question_list %}
         <tr>
             <!-- <td>{{ forloop.counter }}</td> -->
-            <td>{{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.count0|add:1 }}</td>
+            <td>{{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.counter0|add:1 }}</td>
             <td>
                 <a href="{% url 'pybo:detail' question.id %}">
                     {{question.subject}}
