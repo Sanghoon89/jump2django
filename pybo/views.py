@@ -18,7 +18,7 @@ def index(request):
     question_list = Question.objects.order_by('-create_date')
     
     # 페이징 처리
-    paginator = Paginator(question_list, 10) # 페이지당 10개씩 보여 주기
+    paginator = Paginator(question_list, 15) # 페이지당 10개씩 보여 주기
     page_obj = paginator.get_page(page)
 
     context = {'question_list': page_obj}
