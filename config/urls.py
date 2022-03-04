@@ -23,5 +23,4 @@ urlpatterns = [
     path('pybo/', include('pybo.urls')),
     path('common/', include('common.urls')),
     path('', views.index, name='index'), # / 페이지에 해당하는 urlpatterns
-    path('signup/', views.signup, name='signup'),
 ]
