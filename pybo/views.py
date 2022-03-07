@@ -65,7 +65,7 @@ def question_create(request):
     context = {'form': form}
     return render(request, 'pybo/question_form.html', context)
 
-@login_required(login_url='comon:login')
+@login_required(login_url='common:login')
 def answer_create(request, question_id):
     """
     pybo 답변 등록
