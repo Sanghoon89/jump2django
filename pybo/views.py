@@ -33,7 +33,7 @@ def detail(request, question_id):
     context = {'question': question}
     return render(request, 'pybo/question_detail.html', context)
 
-@login_required(login_url='comon:login')
+'''
 def answer_create(request, question_id):
     """
     pybo 답변 등록
@@ -44,6 +44,7 @@ def answer_create(request, question_id):
     answer = Answer(question=question, content=request.POST.get('content'), create_date=timezone.now())
     answer.save()
     return redirect('pybo:detail', question_id=question.id)
+'''
 
 @login_required(login_url='common:login')
 def question_create(request):
@@ -64,6 +65,7 @@ def question_create(request):
     context = {'form': form}
     return render(request, 'pybo/question_form.html', context)
 
+@login_required(login_url='comon:login')
 def answer_create(request, question_id):
     """
     pybo 답변 등록
