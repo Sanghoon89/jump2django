@@ -20,13 +20,12 @@
             <td>{{ question_list.paginator.count|sub:question_list.start_index|sub:forloop.counter0|add:1 }}</td>
             <td class="text-left">
                 <a href="{% url 'pybo:detail' question.id %}">
-                    {{question.subject}}
+                    {{question.subject}}</a>
                     {% if question.answer_set.count > 0 %}
                         <span class="text-danger small ml-2">
                             {{ question.answer_set.count }}
                         </span>
                     {% endif %}
-                </a>
             </td>
             <td>{{ question.author.username }}</td> <!-- 글쓴이 추가 -->
             <td>{{ question.create_date }}</td>
